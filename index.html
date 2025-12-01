@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <style>
+      html {
+        scroll-behavior: smooth !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="d-flex">
+      <aside
+        class="d-none d-lg-flex flex-column flex-shrink-0 p-3 text-bg-light left_navbar"
+        style="width: 280px; min-height: 100vh"
+      >
+        <a
+          href="/"
+          class="d-flex flex-column align-items-center text-black text-decoration-none profile_block"
+        >
+          <img src="./img.jpg" alt="my_profile" class="my_profile mb-2" />
+          <h2 class="my_profile_name text-center">R Dineshkumar</h2>
+        </a>
+
+        <hr />
+
+        <ul class="nav nav-pills flex-column mb-auto">
+          <li class="nav-item">
+            <a
+              href="#home"
+              class="nav-link text-black nav_leftbar"
+              aria-current="page"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="#skills" class="nav-link text-black nav_leftbar">Skills</a>
+          </li>
+          <li>
+            <a href="#resume" class="nav-link text-black nav_leftbar">Resume</a>
+          </li>
+          <li>
+            <a href="#portfolio" class="nav-link text-black nav_leftbar"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="nav-link text-black nav_leftbar"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <div class="icon_container">
+          <a href="https://wa.me/919345952225" target="_blank">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-whatsapp whatsapp-icon"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/dineshkumar-r-287789300/"
+            target="_blank"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-linkedin linkedin_icon"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+              />
+            </svg>
+          </a>
+          <a href="https://github.com/Dineshkumar-R-stack" target="_blank">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-github github-icon"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+              />
+            </svg>
+          </a>
+          <a href="mailto:dineshragul447@gmail.com" target="_blank">
+            <img src="./Gmail-Logo.png" alt="gmail" class="gmail_icon">
+          </a>
+        </div>
+        <hr />
+      </aside>
+
+      <main class="flex-grow-1 main-fade">
+        <header id="header" class="d-flex d-lg-none">
+          <nav class="navbar navbar-expand-md bg-body-tertiary w-100">
+            <div class="container-fluid">
+              <a class="navbar-brand text-center brand_name" href="#"
+                >R Dineshkumar</a
+              >
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-lg-0 list_options">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#home"
+                      >Home</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#resume">Resume</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#portfolio">Projects</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </header>
+
+        <section id="home">
+          <div class="container col-xxl-10 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-">
+              <div
+                class="col-10 col-sm-8 col-lg-6 mx-auto d-flex justify-content-center"
+              >
+                <img
+                  src="./img.jpg"
+                  class="d-block mx-lg-auto img-fluid"
+                  alt="Bootstrap Themes"
+                  width="500"
+                  height="300"
+                  loading="lazy"
+                />
+              </div>
+              <div class="col-lg-6">
+                <p class="design_para">
+                  I'm
+                  <span
+                    class="typed"
+                    data-typed-items="Designer, Developer, Freelancer, Cyber Enthusiast"
+                  ></span>
+                </p>
+
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                  <p style="text-indent: 60px">
+                    Passionate Computer Engineering student with a strong
+                    interest in web development and cybersecurity . A fast
+                    learner who adapts quickly to new technologies and
+                    challenges. Eager to apply hands-on skills in real- world
+                    environments through internships, projects, and
+                    collaborative work.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <hr />
+        <section id="skills">
+          <div
+            class="container section-title aos-init aos-animate col-xxl-10"
+            data-aos="fade-up"
+          >
+            <h2 class="skill_about">Skills</h2>
+            <p style="text-indent: 60px">
+              I bring a strong technical foundation built through hands-on
+              development, academic learning, and real-world project experience.
+              My skills span programming, web development, databases, and core
+              computer science concepts, supported by practical exposure to
+              modern tools and frameworks. I enjoy solving problems, building
+              efficient applications, and working with technologies that enhance
+              user experience and system reliability.
+            </p>
+          </div>
+          <div
+            class="container aos-init aos-animate col-xxl-10"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="row skills-content skills-animation">
+              <div class="col-lg-6">
+                <div class="progress">
+                  <span class="skill_skills"
+                    ><span>HTML</span> <i class="val">95%</i></span
+                  >
+                  <div class="progress-bar-wrap">
+                    <div
+                      class="progress-bar"
+                      style="
+                        height: 10px;
+                        background-color: #149ddd;
+                        width: 95%;
+                      "
+                      role="progressbar"
+                      aria-valuenow="100"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+                <!-- End Skills Item -->
+
+                <div class="progress">
+                  <span class="skill_skills"
+                    ><span>CSS</span> <i class="val">95%</i></span
+                  >
+                  <div class="progress-bar-wrap">
+                    <div
+                      class="progress-bar"
+                      style="
+                        height: 10px;
+                        background-color: #149ddd;
+                        width: 95%;
+                      "
+                      role="progressbar"
+                      aria-valuenow="90"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+                <!-- End Skills Item -->
+
+                <div class="progress">
+                  <span class="skill_skills"
+                    ><span>JavaScript</span> <i class="val">80%</i></span
+                  >
+                  <div class="progress-bar-wrap">
+                    <div
+                      class="progress-bar"
+                      style="
+                        height: 10px;
+                        background-color: #149ddd;
+                        width: 80%;
+                      "
+                      role="progressbar"
+                      aria-valuenow="75"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+                <!-- End Skills Item -->
+                <div class="progress">
+                  <span class="skill_skills"
+                    ><span>PYTHON</span> <i class="val">90%</i></span
+                  >
+                  <div class="progress-bar-wrap">
+                    <div
+                      class="progress-bar"
+                      style="
+                        height: 10px;
+                        background-color: #149ddd;
+                        width: 90%;
+                      "
+                      role="progressbar"
+                      aria-valuenow="75"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="progress">
+                  <span class="skill_skills"
+                    ><span>REACT JS</span> <i class="val">10%</i></span
+                  >
+                  <div class="progress-bar-wrap">
+                    <div
+                      class="progress-bar"
+                      style="
+                        height: 10px;
+                        background-color: #149ddd;
+                        width: 10%;
+                      "
+                      role="progressbar"
+                      aria-valuenow="80"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+                <!-- End Skills Item -->
+
+                <div class="progress">
+                  <span class="skill_skills"
+                    ><span>NODE JS</span> <i class="val">10%</i></span
+                  >
+                  <div class="progress-bar-wrap">
+                    <div
+                      class="progress-bar"
+                      style="
+                        height: 10px;
+                        background-color: #149ddd;
+                        width: 10%;
+                      "
+                      role="progressbar"
+                      aria-valuenow="90"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+                <!-- End Skills Item -->
+
+                <div class="progress">
+                  <span class="skill_skills"
+                    ><span>DJANGO</span> <i class="val">85%</i></span
+                  >
+                  <div class="progress-bar-wrap">
+                    <div
+                      class="progress-bar"
+                      style="
+                        height: 10px;
+                        background-color: #149ddd;
+                        width: 85%;
+                      "
+                      role="progressbar"
+                      aria-valuenow="55"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+                <!-- End Skills Item -->
+                <div class="progress">
+                  <span class="skill_skills"
+                    ><span>DBMS</span> <i class="val">80%</i></span
+                  >
+                  <div class="progress-bar-wrap">
+                    <div
+                      class="progress-bar"
+                      style="
+                        height: 10px;
+                        background-color: #149ddd;
+                        width: 80%;
+                      "
+                      role="progressbar"
+                      aria-valuenow="75"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <hr />
+        <section id="resume">
+          <div class="container mt-5 col-xxl-10">
+            <div class="bg-body-tertiary rounded-3 d-flex resume_box">
+              <h1 class="text-body-emphasis resume_head resume_about">
+                Resume
+              </h1>
+              <p class="col-lg-12" style="text-indent: 60px">
+                I am a dedicated Computer Science student with strong
+                proficiency in Python, C, C++, Java, and modern web technologies
+                including HTML, CSS, JavaScript, and React. I have hands-on
+                experience building full-stack applications, working with
+                databases such as SQL and MongoDB, and applying core engineering
+                concepts like OOP, data structures, algorithms, and system
+                design. My projects span frontend development, backend
+                automation, and cybersecurity—including an IDS integrated with
+                Suricata—demonstrating both versatility and problem-solving
+                ability. I am comfortable with tools like Git, VS Code, Node.js,
+                and MongoDB Atlas, and I bring strong teamwork, adaptability,
+                and decision-making skills to collaborative technical
+                environments.
+              </p>
+              <div class="d-inline-flex gap-2 my-3 justify-content-center">
+                <button
+                  class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill view_button"
+                  type="button"
+                >
+                  View Resume
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-file-earmark-text-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M4.5 9a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 0 1z"
+                    />
+                  </svg>
+                </button>
+                <button
+                  class="btn btn-outline-secondary btn-lg px-4 rounded-pill view_button"
+                  type="button"
+                >
+                  Download Resume
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <hr />
+        <section id="portfolio">
+          <div class="container col-xxl-10 cont_sec mb-5">
+            <div class="bg-body-tertiary rounded-3 d-flex portfolio_box">
+              <h2 class="portfolio_header">Portfolio</h2>
+              <div class="portfolio_about">
+                <p style="text-indent: 60px">
+                  Explore a showcase of my diverse projects, demonstrating my
+                  skills in web development, design, and beyond. Each project
+                  reflects my passion for creating impactful and innovative
+                  digital experiences.
+                </p>
+              </div>
+              <div class="portfolio_body">
+                <div class="portfolio_body_grid d-grid">
+                  <div class="grid_item_1">
+                    <img
+                      src="./ai-generated-8706226_1280.png"
+                      alt=""
+                      class="lib_img"
+                    />
+                  </div>
+                  <div class="grid_item_2">
+                    <img src="./logo.jpg" alt="" class="log_img" />
+                  </div>
+                  <div class="grid_item_3">
+                    <img
+                      src="./ai-generated-8843652_1280.jpg"
+                      alt=""
+                      class="dog_img"
+                    />
+                  </div>
+                  <div class="grid_item_4">
+                    <img src="./delivery.jpg" alt="" class="delivery_img" />
+                  </div>
+                  <div class="grid_item_5">
+                    <img src="./scada.jpg" alt="" class="scada_img" />
+                  </div>
+                  <div class="grid_item_6">
+                    <img
+                      src="./Screenshot 2025-11-29 195750.png"
+                      alt=""
+                      class="login_img"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <hr />
+        <section id="contact" class="contact section py-5">
+          <div class="container" data-aos="fade-up">
+            <!-- Section Title -->
+            <div class="section-title text-center mb-4">
+              <h2>Contact</h2>
+              <p class="text-muted">
+                An open invitation to connect, and exploring collaborative
+                opportunities on my personal portfolio website.
+              </p>
+            </div>
+
+            <div
+              class="row gy-4 align-items-start"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <!-- Info column -->
+              <div class="col-lg-5">
+                <div
+                  class="info-wrap px-3 pt-3 rounded bg-white h-100 shadow-sm"
+                >
+                  <div class="info-item d-flex align-items-start mb-3">
+                    <div class="info-icon me-3">
+                      <i class="bi bi-geo-alt"></i>
+                    </div>
+                    <div>
+                      <h5 class="mb-1">Address</h5>
+                      <p class="mb-0">SASTRA DEEMED UNIVERSITY</p>
+                    </div>
+                  </div>
+
+                  <div class="info-item d-flex align-items-start mb-3">
+                    <div class="info-icon me-3">
+                      <i class="bi bi-telephone"></i>
+                    </div>
+                    <div>
+                      <h5 class="mb-1">Call Me</h5>
+                      <p class="mb-0">+91 9345952225</p>
+                    </div>
+                  </div>
+
+                  <div class="info-item d-flex align-items-start mb-3">
+                    <div class="info-icon me-3">
+                      <i class="bi bi-envelope"></i>
+                    </div>
+                    <div>
+                      <h5 class="mb-1">Email Me</h5>
+                      <p class="mb-0">dineshragul447@gmail.com</p>
+                    </div>
+                  </div>
+
+                  <div class="mt-3">
+                    <!-- Responsive map using Bootstrap ratio utility -->
+                    <div class="ratio ratio-4x3 rounded overflow-hidden g_map">
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2980.8921947645053!2d79.01583080913136!3d10.728513089373237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baabe2803211597%3A0x6371e96c202331c!2sSASTRA%20Deemed%20University!5e1!3m2!1sen!2sin!4v1764429166415!5m2!1sen!2sin"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        aria-label="Map"
+                      >
+                      </iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Form column -->
+              <div class="col-lg-7">
+                <div class="p-3 rounded bg-white shadow-sm h-100">
+                  <form id="contactForm" class="php-email-form" novalidate>
+                    <div class="row gy-3">
+                      <div class="col-md-6">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input
+                          type="text"
+                          name="name"
+                          id="name"
+                          class="form-control"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Please enter your name.
+                        </div>
+                      </div>
+
+                      <div class="col-md-6">
+                        <label for="email" class="form-label">Your Email</label>
+                        <input
+                          type="email"
+                          name="email"
+                          id="email"
+                          class="form-control"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Please enter a valid email.
+                        </div>
+                      </div>
+
+                      <div class="col-12">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input
+                          type="text"
+                          name="subject"
+                          id="subject"
+                          class="form-control"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Please add a subject.
+                        </div>
+                      </div>
+
+                      <div class="col-12">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea
+                          class="form-control"
+                          name="message"
+                          id="message"
+                          rows="6"
+                          required
+                        ></textarea>
+                        <div class="invalid-feedback">
+                          Please write your message.
+                        </div>
+                      </div>
+
+                      <div class="col-12 text-center">
+                        <div
+                          class="form-status mb-2"
+                          aria-live="polite"
+                          style="min-height: 1.2rem"
+                        ></div>
+                        <button type="submit" class="btn btn-primary btn-lg">
+                          Send Message
+                        </button>
+                      </div>
+                    </div>
+                    <!-- /.row -->
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /.container -->
+        </section>
+        <section id="footer">
+          <div class="container">
+            <footer class="footer">
+              <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item">
+                  <a
+                    href="https://wa.me/919345952225"
+                    target="_blank"
+                    class="nav-link px-2 text-body-secondary"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-whatsapp whatsapp-icon"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"
+                      /></svg
+                  ></a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    href="https://www.linkedin.com/in/dineshkumar-r-287789300/"
+                    class="nav-link px-2 text-body-secondary"
+                    target="_blank"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-linkedin linkedin_icon"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                      /></svg
+                  ></a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    href="https://github.com/Dineshkumar-R-stack"
+                    class="nav-link px-2 text-body-secondary"
+                    target="_blank"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-github github-icon"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+                      /></svg
+                  ></a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    href="mailto:dineshragul447@gmail.com"
+                    class="nav-link px-2 text-body-secondary"
+                    target="_blank"
+                    ><img src="./Gmail-Logo.png" alt="gmail" class="gmail_icon"></a>
+                </li>
+              </ul>
+              <p class="text-center text-body-secondary pb-5">
+                all the rights are reserved by Dineshkumar <br />
+                ©2025
+              </p>
+            </footer>
+          </div>
+        </section>
+      </main>
+    </div>
+    <!-- typed.js library (CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- your init: wait until DOM is ready and use data-typed-items if present -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const el = document.querySelector(".typed");
+        if (!el) {
+          console.warn("Typed element not found");
+          return;
+        }
+
+        // read items from data-typed-items if available (comma separated), else fallback
+        const data = el.getAttribute("data-typed-items");
+        const items = data
+          ? data
+              .split(",")
+              .map((s) => s.trim())
+              .filter(Boolean)
+          : ["Designer", "Developer", "Freelancer", "Cyber Enthusiast"];
+
+        // create Typed instance
+        new Typed(el, {
+          strings: items,
+          typeSpeed: 100,
+          backSpeed: 50,
+          loop: true,
+          smartBackspace: true,
+        });
+      });
+    </script>
+    <script>
+      (function () {
+        "use strict";
+        const form = document.getElementById("contactForm");
+        const status = form.querySelector(".form-status");
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          // Basic HTML5 validation
+          if (!form.checkValidity()) {
+            form.classList.add("was-validated");
+            return;
+          }
+          status.textContent = "Sending...";
+          // Simulate sending (replace with fetch to your endpoint)
+          setTimeout(() => {
+            status.textContent = "Your message has been sent. Thank you!";
+            form.reset();
+            form.classList.remove("was-validated");
+          }, 900);
+        });
+      })();
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const sections = document.querySelectorAll("section[id]");
+        const navLinks = document.querySelectorAll(".nav_leftbar");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              const id = entry.target.id;
+              const navItem = document.querySelector(
+                `.nav_leftbar[href="#${id}"]`
+              );
+
+              if (entry.isIntersecting) {
+                navLinks.forEach((link) => link.classList.remove("active"));
+                if (navItem) navItem.classList.add("active");
+              }
+            });
+          },
+          { threshold: 0.6 }
+        );
+
+        sections.forEach((sec) => observer.observe(sec));
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // nav links that point to same-page anchors
+        const navLinks = document.querySelectorAll('a[href^="#"]');
+        const main = document.querySelector("main.main-fade");
+
+        navLinks.forEach((link) => {
+          link.addEventListener("click", (e) => {
+            const href = link.getAttribute("href");
+            // only handle internal anchors with a hash and not '#'
+            if (!href || href === "#") return;
+            const target = document.querySelector(href);
+            if (!target) return; // no matching section
+
+            e.preventDefault();
+
+            // fade out
+            main.classList.add("fading-out");
+
+            // after fade-out, scroll & fade back in
+            setTimeout(() => {
+              target.scrollIntoView({ behavior: "smooth", block: "start" });
+
+              // wait for scroll to finish (approx) then fade in
+              // use a timeout that matches smooth-scroll length (adjust if needed)
+              setTimeout(() => {
+                main.classList.remove("fading-out");
+                // optional: ensure the section gets the visible class
+                target.classList.add("is-visible");
+              }, 400); // 400ms after scroll starts (tune as required)
+            }, 220); // must be slightly less than CSS fade duration
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
